@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Christmas Card</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: rgba(0, 0, 0, 1);
+      color: #d92424;
+      text-align: center;
+      margin: 50px;
+    }
+
+    .card {
+      border: 2px solid #ff5733;
+      padding: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #d6b4ff;
+    }
+
+    .card h2 {
+      color: #d9534f;
+    }
+
+    /* Christmas elements styling */
+    .icon {
+      font-size: 36px;
+      margin: 10px;
+      color: #d9534f;
+    }
+
+    /* Snow effect styling */
+    #snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background: url('img/s1.png'), url('img/s2.png'), url('img/s3.png');
+      animation: snow 10s linear infinite;
+    }
+
+    @keyframes snow {
+      0% { background-position: 0px 0px, 0px 0px, 0px 0px; }
+      50% { background-position: 500px 500px, 100px 200px, -100px 150px; }
+      100% { background-position: 500px 1000px, 200px 400px, -100px 300px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Snow effect -->
+<div id="snow"></div>
+
+<!-- Christmas Card -->
+<div class="card">
+  <!-- Christmas tree icon -->
+  <i class="icon fas fa-tree"></i>
+  <h2>Merry Christmas, <span id="recipientName">Name</span>!</h2>
+  <p>Dear <span id="senderName">Sender</span>,</p>
+  <p>Wishing you a joyous holiday season filled with love and laughter. May your days be merry and bright!</p>
+  <!-- Snowflake icon -->
+  <i class="icon fas fa-snowflake"></i>
+  <p><em><span id="personalMessage">Your personalized message here</span></em></p>
+  <p>Warmest wishes,</p>
+  <p>Your Name</p>
+</div>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
